@@ -1,0 +1,7 @@
+BasedOnStyle: Microsoft
+
+UseTab: Always
+IndentWidth: 4
+TabWidth: 4
+ColumnLimit: 80
+AlignEscapedNewlines: Left
