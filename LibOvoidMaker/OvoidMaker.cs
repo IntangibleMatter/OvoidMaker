@@ -23,7 +23,9 @@ public class OvoidMaker
 
 		doc.Children.Add(group);
 		group.Children.Add(new SvgCircle {
-			Radius = 100,
+			CenterX = width / 2,
+			CenterY = height / 2,
+			Radius = width / 4,
 			Fill = new SvgColourServer(Color.Red),
 			Stroke = new SvgColourServer(Color.Black),
 			StrokeWidth = 2,
