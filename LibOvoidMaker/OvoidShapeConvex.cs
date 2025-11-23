@@ -5,7 +5,7 @@ namespace LibOvoidMaker;
 public class OvoidShapeConvex : OvoidShape
 {
 
-	public override SvgDocument ToSvgElement()
+	public override SvgElement ToSvgElement()
 	{
 		return null;
 	}

@@ -2,10 +2,11 @@ using Svg;
 
 namespace LibOvoidMaker;
 
-public abstract class OvoidShape
+public abstract class OvoidShape //: SvgElement
 {
-	public float Width { get; set; }
-	public float Height { get; set; }
+	public required float Width { get; set; }
+	public required float Height { get; set; }
+	public required SvgColourServer Stroke { get; set; }
 
-	public abstract SvgDocument ToSvgElement();
+	public abstract SvgElement ToSvgElement();
 }

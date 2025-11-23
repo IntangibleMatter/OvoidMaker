@@ -12,7 +12,7 @@ public class OvoidMaker
 		Convex,
 	}
 
-	public static SvgDocument Create(int width, int height)
+	public static SvgDocument Create(float width, float height)
 	{
 		var doc = new SvgDocument() {
 			Width = width,
@@ -22,14 +22,18 @@ public class OvoidMaker
 		var group = new SvgGroup();
 
 		doc.Children.Add(group);
-		group.Children.Add(new SvgCircle {
+		group.Children.Add(
+			new OvoidShapeFlat() { Width = width, Height = height,
+								   Stroke = new SvgColourServer(Color.Black) }
+				.ToSvgElement());
+		/*group.Children.Add(new SvgCircle {
 			CenterX = width / 2,
 			CenterY = height / 2,
 			Radius = width / 4,
 			Fill = new SvgColourServer(Color.Red),
 			Stroke = new SvgColourServer(Color.Black),
 			StrokeWidth = 2,
-		});
+		});*/
 
 		return doc;
 	}
