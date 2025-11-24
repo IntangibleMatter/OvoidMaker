@@ -7,7 +7,7 @@ class Program
 	static void Main(string[] args)
 	{
 		// Console.WriteLine("Hello, world!");
-		var doc = OvoidMaker.Create(128, 128);
+		var doc = OvoidMaker.Create(16, 8);
 		Console.WriteLine(Svg.SvgExtentions.GetXML(doc));
 	}
 }
